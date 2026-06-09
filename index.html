@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hokkaido Day Trips — Sapporo Base · August 2026</title>
+<script src="assets/mermaid.min.js"></script>
+<style>
+:root{--bg:#0c0e11;--bg2:#13161b;--card:#161a20;--card2:#1c212a;--ink:#e9ecf1;--muted:#9aa3b0;
+--faint:#6b7480;--line:#262c35;--food:#e7a14a;--see:#5fb0e6;--do:#7fd1a3;--getting:#c98fe0;--climate:#6fd4d0;
+--easy:#7fd1a3;--medium:#e7c84a;--haul:#e8746b;--base:#5fb0e6;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:"Helvetica Neue",Inter,system-ui,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:var(--see)}
+.hero{position:relative;padding:80px 24px 54px;text-align:center;border-bottom:1px solid var(--line);
+background:radial-gradient(1100px 460px at 50% -10%,rgba(95,176,230,.16),transparent 60%),
+radial-gradient(800px 400px at 14% 6%,rgba(127,209,163,.10),transparent 55%),
+radial-gradient(800px 400px at 86% 4%,rgba(201,143,224,.10),transparent 55%),linear-gradient(180deg,#0a0c0f,#0c0e11)}
+.kicker{font-size:12.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--see);font-weight:600;margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,7vw,76px);line-height:1.03;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--food)}
+.hero .sub{margin:22px auto 0;max-width:660px;color:var(--muted);font-size:16.5px}
+.frame{margin:26px auto 0;max-width:780px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.chip{font-size:12.5px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.chip b{color:var(--see)}
+.trains{display:inline-flex;gap:7px;margin-top:22px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+color:var(--do);border:1px solid rgba(127,209,163,.35);border-radius:999px;padding:8px 17px;background:rgba(127,209,163,.07);font-weight:600}
+.band{max-width:1180px;margin:0 auto;padding:40px 24px 6px}
+.band h3.sec{font-family:var(--serif);font-weight:500;font-size:27px;margin-bottom:6px}
+.band p.lead{color:var(--muted);font-size:15px;max-width:820px;margin-bottom:18px}
+.hub{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:14px 10px 6px;overflow-x:auto}
+.hub .mermaid{min-width:680px}
+.legend{display:flex;flex-wrap:wrap;gap:14px 22px;margin:18px 0 2px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
+.legend .g{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.leaf{letter-spacing:1px;font-size:12px}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px;text-transform:uppercase}
+.pill.easy{background:rgba(127,209,163,.14);color:var(--easy);border:1px solid rgba(127,209,163,.3)}
+.pill.medium{background:rgba(231,200,74,.13);color:var(--medium);border:1px solid rgba(231,200,74,.3)}
+.pill.haul{background:rgba(232,116,107,.13);color:var(--haul);border:1px solid rgba(232,116,107,.3)}
+.pill.base{background:rgba(95,176,230,.14);color:var(--base);border:1px solid rgba(95,176,230,.3)}
+.grid{max-width:1320px;margin:6px auto 0;padding:18px 24px 30px;display:grid;
+grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;
+display:flex;flex-direction:column;transition:transform .22s,border-color .22s;outline:none}
+.card:hover,.card:focus{transform:translateY(-4px);border-color:#3a4350}
+.card-img{position:relative;height:210px;background:var(--card2)}
+.card-img img{transition:transform .6s}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-num{position:absolute;top:12px;left:12px;font-family:var(--serif);font-size:13px;background:rgba(8,10,13,.7);
+border:1px solid var(--line);border-radius:8px;padding:2px 9px}
+.card-cool{position:absolute;top:11px;right:12px;background:rgba(8,10,13,.7);border-radius:999px;padding:3px 9px;font-size:12px}
+.card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.card-tit{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.card-tit h2{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.1}
+.card-tit .jp{color:var(--faint);font-size:11.5px}
+.card-hook{color:var(--muted);font-size:13.5px;flex:1}
+.card-foot{display:flex;align-items:center;gap:10px;margin-top:4px;padding-top:12px;border-top:1px solid var(--line)}
+.ftime{font-size:12.5px;color:var(--faint)}
+.more{margin-left:auto;font-size:12px;color:var(--see)}
+/* modal */
+.modal{position:fixed;inset:0;z-index:50;background:rgba(6,8,11,.78);backdrop-filter:blur(4px);
+display:none;padding:36px 18px;overflow-y:auto}
+.modal.open{display:block}
+.modal-inner{max-width:1040px;margin:0 auto;background:var(--bg2);border:1px solid var(--line);
+border-radius:18px;padding:30px 32px 38px;position:relative}
+.mclose{position:absolute;top:16px;right:18px;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);
+background:var(--card);color:var(--ink);font-size:22px;cursor:pointer;line-height:1}
+.mclose:hover{border-color:#4a5462}
+.mkick{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--see);font-weight:600}
+.modal-head h2{font-family:var(--serif);font-weight:500;font-size:34px;margin:6px 0 4px}
+.modal-head h2 .jp{font-size:16px;color:var(--faint)}
+.mhook{color:var(--muted);font-size:15.5px;font-family:var(--serif);font-style:italic;max-width:680px}
+.flowwrap{margin:24px 0 6px;padding:16px 18px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.flowlabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.flowwrap .mermaid.flow{text-align:center;min-height:40px}
+.flowwrap .mermaid.flow svg{max-width:100%;height:auto;margin:0 auto}
+.info{margin:22px 0 8px;display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.irow{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:13px 16px;background:var(--card);font-size:14px}
+.ikey{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;position:relative;padding-left:14px}
+.ikey::before{content:"";position:absolute;left:0;top:5px;width:7px;height:7px;border-radius:2px}
+.ikey.food{color:var(--food)}.ikey.food::before{background:var(--food)}
+.ikey.see{color:var(--see)}.ikey.see::before{background:var(--see)}
+.ikey.do{color:var(--do)}.ikey.do::before{background:var(--do)}
+.ikey.getting{color:var(--getting)}.ikey.getting::before{background:var(--getting)}
+.ikey.climate{color:var(--climate)}.ikey.climate::before{background:var(--climate)}
+.ival{color:var(--muted)}
+.galh{font-family:var(--serif);font-weight:500;font-size:20px;margin:26px 0 14px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.tile{position:relative;border-radius:11px;overflow:hidden;cursor:zoom-in;background:var(--card2);aspect-ratio:4/3}
+.tile img{transition:transform .5s}
+.tile:hover img{transform:scale(1.06)}
+.tile figcaption{position:absolute;left:0;right:0;bottom:0;font-size:11.5px;line-height:1.35;color:#fff;
+padding:18px 11px 9px;background:linear-gradient(0deg,rgba(5,7,10,.92),transparent);
+opacity:0;transition:opacity .25s}
+.tile:hover figcaption{opacity:1}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(4,6,9,.93);display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out;flex-direction:column;gap:14px}
+.lb.open{display:flex}
+.lb img{max-width:94vw;max-height:82vh;width:auto;height:auto;border-radius:8px;object-fit:contain}
+.lb p{color:var(--muted);font-size:13.5px;max-width:760px;text-align:center}
+/* itinerary timeline */
+.timeline{max-width:880px;margin:6px auto 0}
+.tnode{display:grid;grid-template-columns:58px 22px 1fr;gap:14px;align-items:stretch}
+.tnode.link{cursor:pointer}
+.tdate{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:2px}
+.tmon{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.tday{font-family:var(--serif);font-size:26px;line-height:1}
+.tdow{font-size:11px;color:var(--faint)}
+.tline{display:flex;justify-content:center;position:relative}
+.tline::before{content:"";position:absolute;top:8px;bottom:-14px;width:2px;background:var(--line)}
+.tnode:last-child .tline::before{display:none}
+.tdot{width:13px;height:13px;border-radius:50%;margin-top:6px;z-index:1;border:2px solid var(--bg)}
+.tdot.base{background:var(--base)} .tdot.easy{background:var(--easy)}
+.tdot.medium{background:var(--medium)} .tdot.haul{background:var(--getting)}
+.tbody{padding:0 0 22px}
+.ttop{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+.ttop h4{font-family:var(--serif);font-weight:500;font-size:18px}
+.tbody p{color:var(--muted);font-size:13.5px;max-width:680px}
+.tmore{display:inline-block;margin-top:7px;font-size:12px;color:var(--see)}
+.tnode.link:hover .ttop h4{color:var(--see)}
+.tnode.link:hover .tbody{background:rgba(255,255,255,.012);border-radius:10px}
+@media(max-width:560px){.tnode{grid-template-columns:46px 18px 1fr;gap:10px} .tday{font-size:22px}}
+/* dropped */
+.dropped{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:8px}
+.dcard{display:flex;gap:0;background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;opacity:.9}
+.dcard img{width:118px;height:auto;flex:none;filter:grayscale(.3)}
+.dbody{padding:13px 15px}
+.dbody h4{font-family:var(--serif);font-weight:500;font-size:17px;margin-bottom:5px}
+.dbody p{font-size:12.5px;color:var(--muted)}
+/* table */
+.tablewrap{max-width:1100px;margin:30px auto 40px;padding:0 24px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;border:1px solid var(--line);border-radius:13px;overflow:hidden}
+thead th{background:var(--bg2);text-align:left;padding:12px 14px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line)}
+tbody td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:middle}
+tbody tr{cursor:pointer} tbody tr:hover td{background:rgba(255,255,255,.02)}
+tbody tr:last-child td{border-bottom:none}
+.muted{color:var(--faint)}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:34px 24px 70px;text-align:center;color:var(--faint);font-size:12px}
+footer .credits{max-width:900px;margin:14px auto 0;columns:2;column-gap:30px;text-align:left;list-style:none;font-size:11.5px;line-height:1.7}
+@media(max-width:640px){footer .credits{columns:1} .irow{grid-template-columns:1fr;gap:4px} .dcard img{width:96px}}
+</style></head>
+<body>
+
+<div class="hero">
+  <div class="kicker">Hokkaido · August 2026</div>
+  <h1>Sapporo &amp; the <em>cool north</em></h1>
+  <p class="sub">One base in Sapporo, ten slow nights, and a fan of day trips into Hokkaido's lakes, gorges, hot springs and hills — chasing summer's coolest, least-humid corners. Trains only.</p>
+  <div class="frame">
+    <span class="chip"><b>Base</b> Sapporo · 10 nights</span>
+    <span class="chip"><b>When</b> Aug 16–25</span>
+    <span class="chip"><b>Then</b> Tokyo · 3 nights</span>
+    <span class="chip"><b>Who</b> Aryan + Jean + Saurav</span>
+    <span class="chip"><b>Pace</b> active but lazy</span>
+  </div>
+  <div class="trains">🚆 Trains &amp; transit only — no car</div>
+</div>
+
+<div class="band">
+  <h3 class="sec">The hub &amp; its spokes</h3>
+  <p class="lead">Sapporo sits at the center; every line below is a day trip you can do on public transit and be back by night. Greener leaf = cooler escape from the heat. Tap any place for its gallery and a day-flow.</p>
+  <div class="hub">
+    <pre class="mermaid">
+flowchart LR
+    SAP(("🏙️ Sapporo<br/>home base")):::base
+    SAP --->|"~35 min · easy"| otaru["Otaru"]
+    SAP --->|"~60 min · easy"| jozankei["Jozankei Onsen"]
+    SAP --->|"~1h15 · easy"| noboribetsu["Noboribetsu"]
+    SAP --->|"~1.5 hr · some transit"| shikotsu["Lake Shikotsu"]
+    SAP --->|"~2 hr · some transit"| toya["Lake Toya"]
+    SAP --->|"~2 hr · some transit"| furano_biei["Furano & Biei"]
+    SAP --->|"~1.5 hr · some transit"| asahiyama_zoo["Asahiyama Zoo"]
+    class otaru c2;
+    class jozankei c3;
+    class noboribetsu c3;
+    class shikotsu c4;
+    class toya c3;
+    class furano_biei c3;
+    class asahiyama_zoo c2;
+    classDef base fill:#13344a,stroke:#5fb0e6,stroke-width:2px,color:#eaf4fb,font-weight:bold;
+    classDef c1 fill:#2a2520,stroke:#e7a14a,color:#f3e7d8;
+    classDef c2 fill:#1f2a30,stroke:#6f9fc0,color:#e3eef5;
+    classDef c3 fill:#163029,stroke:#5fb88f,color:#dff3ea;
+    classDef c4 fill:#123038,stroke:#54c8d0,color:#dbf5f6;
+    </pre>
+  </div>
+  <div class="legend">
+    <span class="g"><span class="pill easy">easy</span> 1 train / direct bus</span>
+    <span class="g"><span class="pill medium">some transit</span> a transfer or two</span>
+    <span class="g">🌿 mild → 🌿🌿🌿🌿 coldest</span>
+    <span class="g" style="color:var(--muted)">Tap a card to open its gallery</span>
+  </div>
+</div>
+
+<div class="band" style="padding-top:14px">
+  <h3 class="sec">Day trips from Sapporo</h3>
+  <p class="lead">Eight places worth a day (plus the city itself). Photos are real summer shots — Hokkaido in August is green and cool, never snowy.</p>
+</div>
+<div class="grid">
+        <article class="card" data-slug="sapporo" onclick="openLoc('sapporo')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('sapporo')">
+          <div class="card-img"><img loading="lazy" src="assets/img/sapporo/01.jpg" alt="Sapporo">
+            <span class="card-num">01</span>
+            <span class="card-cool"><span class="leaf">🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Sapporo</h2><span class="jp">札幌 · home base</span></div>
+            <p class="card-hook">Your home for 10 nights — beer gardens, neon Susukino, seafood markets and a mountain night view.</p>
+            <div class="card-foot">
+              <span class="pill base">home base</span>
+              <span class="ftime">Home base</span>
+              <span class="more">13 photos →</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-slug="otaru" onclick="openLoc('otaru')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('otaru')">
+          <div class="card-img"><img loading="lazy" src="assets/img/otaru/01.jpg" alt="Otaru">
+            <span class="card-num">02</span>
+            <span class="card-cool"><span class="leaf">🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Otaru</h2><span class="jp">小樽</span></div>
+            <p class="card-hook">Canal town of glass, music boxes and the freshest sushi — an easy 35-minute warm-up day.</p>
+            <div class="card-foot">
+              <span class="pill easy">easy</span>
+              <span class="ftime">~35 min</span>
+              <span class="more">12 photos →</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-slug="jozankei" onclick="openLoc('jozankei')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('jozankei')">
+          <div class="card-img"><img loading="lazy" src="assets/img/jozankei/01.jpg" alt="Jozankei Onsen">
+            <span class="card-num">03</span>
+            <span class="card-cool"><span class="leaf">🌿🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Jozankei Onsen</h2><span class="jp">定山渓</span></div>
+            <p class="card-hook">Sapporo&#x27;s backyard hot-spring gorge — green canyon, river baths and an easy half-day reset.</p>
+            <div class="card-foot">
+              <span class="pill easy">easy</span>
+              <span class="ftime">~60 min</span>
+              <span class="more">14 photos →</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-slug="noboribetsu" onclick="openLoc('noboribetsu')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('noboribetsu')">
+          <div class="card-img"><img loading="lazy" src="assets/img/noboribetsu/01.jpg" alt="Noboribetsu">
+            <span class="card-num">04</span>
+            <span class="card-cool"><span class="leaf">🌿🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Noboribetsu</h2><span class="jp">登別</span></div>
+            <p class="card-hook">Hokkaido&#x27;s onsen heavyweight — a steaming &#x27;Hell Valley&#x27; crater and the best baths in the north.</p>
+            <div class="card-foot">
+              <span class="pill easy">easy</span>
+              <span class="ftime">~1h15</span>
+              <span class="more">10 photos →</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-slug="shikotsu" onclick="openLoc('shikotsu')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('shikotsu')">
+          <div class="card-img"><img loading="lazy" src="assets/img/shikotsu/01.jpg" alt="Lake Shikotsu">
+            <span class="card-num">05</span>
+            <span class="card-cool"><span class="leaf">🌿🌿🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Lake Shikotsu</h2><span class="jp">支笏湖</span></div>
+            <p class="card-hook">Japan&#x27;s clearest lake — paddle a see-through kayak over water you can stare straight down through.</p>
+            <div class="card-foot">
+              <span class="pill medium">some transit</span>
+              <span class="ftime">~1.5 hr</span>
+              <span class="more">9 photos →</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-slug="toya" onclick="openLoc('toya')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('toya')">
+          <div class="card-img"><img loading="lazy" src="assets/img/toya/01.jpg" alt="Lake Toya">
+            <span class="card-num">06</span>
+            <span class="card-cool"><span class="leaf">🌿🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Lake Toya</h2><span class="jp">洞爺湖</span></div>
+            <p class="card-hook">Caldera lake with a steaming baby volcano — and fireworks over the water every summer night.</p>
+            <div class="card-foot">
+              <span class="pill medium">some transit</span>
+              <span class="ftime">~2 hr</span>
+              <span class="more">16 photos →</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-slug="furano-biei" onclick="openLoc('furano-biei')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('furano-biei')">
+          <div class="card-img"><img loading="lazy" src="assets/img/furano-biei/01.jpg" alt="Furano &amp;amp; Biei">
+            <span class="card-num">07</span>
+            <span class="card-cool"><span class="leaf">🌿🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Furano &amp; Biei</h2><span class="jp">富良野・美瑛</span></div>
+            <p class="card-hook">Hokkaido&#x27;s postcard — patchwork hills, rainbow flower fields and the otherworldly Blue Pond.</p>
+            <div class="card-foot">
+              <span class="pill medium">some transit</span>
+              <span class="ftime">~2 hr</span>
+              <span class="more">12 photos →</span>
+            </div>
+          </div>
+        </article>
+        <article class="card" data-slug="asahiyama-zoo" onclick="openLoc('asahiyama-zoo')" tabindex="0"
+                 onkeydown="if(event.key==='Enter')openLoc('asahiyama-zoo')">
+          <div class="card-img"><img loading="lazy" src="assets/img/asahiyama-zoo/01.jpg" alt="Asahiyama Zoo">
+            <span class="card-num">08</span>
+            <span class="card-cool"><span class="leaf">🌿🌿</span></span>
+          </div>
+          <div class="card-body">
+            <div class="card-tit"><h2>Asahiyama Zoo</h2><span class="jp">旭山動物園 · 旭川</span></div>
+            <p class="card-hook">Japan&#x27;s most ingenious zoo — penguins, polar bears and a glass seal tube — plus Asahikawa ramen.</p>
+            <div class="card-foot">
+              <span class="pill medium">some transit</span>
+              <span class="ftime">~1.5 hr</span>
+              <span class="more">12 photos →</span>
+            </div>
+          </div>
+        </article></div>
+
+<div class="band">
+  <h3 class="sec">How the 10 days could flow</h3>
+  <p class="lead">A tentative shape, not a lock — dates shift with flights. Built for "active but lazy": ~5 day trips threaded between slow Sapporo days, with the three real hauls (Shikotsu · Furano · Toya) never back-to-back. Tap any linked day to jump to its gallery.</p>
+  <div class="timeline"><div class="tnode" >
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">16</span><span class="tdow">Sat</span></div>
+            <div class="tline"><span class="tdot base"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill base">Arrive</span><h4>Arrive — converge on Sapporo</h4></div>
+              <p>Aryan lands New Chitose from Toronto (the long pole); Jean &amp; Saurav likely in earlier. Check in once, unpack for 10 nights. Easy first night: Susukino dinner + a cold Sapporo Classic. Nothing strenuous.</p>
+            </div></div><div class="tnode link" onclick="openLoc('sapporo')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">17</span><span class="tdow">Sun</span></div>
+            <div class="tline"><span class="tdot base"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill base">Sapporo</span><h4>Sapporo, slowly</h4></div>
+              <p>Jetlag-friendly city day. Nijo Market breakfast, Odori Park &amp; TV Tower, red-brick Akarenga, then Mt Moiwa for the sunset night view. Find your coffee spot and your izakaya.</p><span class="tmore">Sapporo gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('otaru')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">18</span><span class="tdow">Mon</span></div>
+            <div class="tline"><span class="tdot medium"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill medium">Day trip</span><h4>Otaru — easy warm-up</h4></div>
+              <p>35-min train. Canal, Sakaimachi street, glass-blowing, sushi-counter lunch, soft serve. Half-to-full day, back whenever. The gentlest day trip on the board.</p><span class="tmore">Otaru gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('shikotsu')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">19</span><span class="tdow">Tue</span></div>
+            <div class="tline"><span class="tdot medium"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill medium">Day trip</span><h4>Lake Shikotsu — the cool one 🌿🌿🌿🌿</h4></div>
+              <p>HAUL #1. Japan's clearest lake: clear-bottom kayak over the 'Shikotsu blue', himemasu lunch, lakeside onsen. Coolest, crispest air of the trip — placed early while everyone's fresh.</p><span class="tmore">Lake Shikotsu gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('jozankei')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">20</span><span class="tdow">Wed</span></div>
+            <div class="tline"><span class="tdot easy"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill easy">Slow day</span><h4>Slow Sapporo + Jozankei half-day</h4></div>
+              <p>Recovery day. Sleep in, soup curry, Beer Museum or Shiroi Koibito Park — or bolt on Jozankei (Sapporo's backyard onsen gorge, ~60 min) for an afternoon soak and the Futami bridge. Low-energy by design.</p><span class="tmore">Jozankei Onsen gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('furano-biei')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">21</span><span class="tdow">Thu</span></div>
+            <div class="tline"><span class="tdot medium"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill medium">Day trip</span><h4>Furano + Biei — postcard country</h4></div>
+              <p>HAUL #2, the biggest. Lavender Express ~2 hr. Blue Pond, Shirahige Falls, Biei patchwork hills by e-bike, Farm Tomita flowers, Furano melon. ⚠️ Pre-book the e-bike / taxi-tour / Twinkle Bus — farm buses are sparse.</p><span class="tmore">Furano &amp; Biei gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('noboribetsu')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">22</span><span class="tdow">Fri</span></div>
+            <div class="tline"><span class="tdot medium"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill medium">Day trip</span><h4>Noboribetsu — onsen reset</h4></div>
+              <p>Restful by nature (counts as downtime after Furano). 'Hell Valley' steaming crater walk, Oyunuma river footbath, then a long soak in Hokkaido's most famous baths. Back for a quiet Sapporo night.</p><span class="tmore">Noboribetsu gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('sapporo')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">23</span><span class="tdow">Sat</span></div>
+            <div class="tline"><span class="tdot easy"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill easy">Slow day</span><h4>Slow Sapporo</h4></div>
+              <p>A true do-nothing day. Markets, Moerenuma Park, shopping, café-hopping, an Odori beer-garden afternoon. Bank some energy before the finale.</p><span class="tmore">Sapporo gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('toya')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">24</span><span class="tdow">Sun</span></div>
+            <div class="tline"><span class="tdot medium"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill medium">Day trip</span><h4>Lake Toya — fireworks finale</h4></div>
+              <p>HAUL #3. Showa-Shinzan + Mt Usu ropeway, lake cruise to Nakajima, lakeside onsen, and nightly summer fireworks over the water to close out Hokkaido. Swap for Asahiyama Zoo or another slow day if energy's low.</p><span class="tmore">Lake Toya gallery →</span>
+            </div></div><div class="tnode link" onclick="openLoc('sapporo')">
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">25</span><span class="tdow">Mon</span></div>
+            <div class="tline"><span class="tdot easy"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill easy">Slow day</span><h4>Last Sapporo day</h4></div>
+              <p>Slow morning, last Nijo Market crab, souvenirs, a farewell beer garden, repack. Optional second helping of anything you loved.</p><span class="tmore">Sapporo gallery →</span>
+            </div></div><div class="tnode" >
+            <div class="tdate"><span class="tmon">Aug</span><span class="tday">26</span><span class="tdow">Tue</span></div>
+            <div class="tline"><span class="tdot haul"></span></div>
+            <div class="tbody">
+              <div class="ttop"><span class="pill haul">Transfer</span><h4>Sapporo → Tokyo</h4></div>
+              <p>Fly New Chitose → Haneda (~1h45) or Tohoku Shinkansen if you want the ride. Into Tokyo for 3 nights (Aug 26–28) in new-to-you neighborhoods, then everyone flies home Sat Aug 29.</p>
+            </div></div></div>
+</div>
+
+<div class="band">
+  <h3 class="sec">Considered, but too far by train</h3>
+  <p class="lead">Beautiful spots we ruled out for a strict single base on public transit — noted so you know we checked.</p>
+  <div class="dropped"><div class="dcard">
+            <img loading="lazy" src="assets/img/dropped/asahidake.jpg" alt="Asahidake / Daisetsuzan">
+            <div class="dbody"><h4>Asahidake / Daisetsuzan</h4><p>The coolest air in Japan (summit 10–15°C) — but ~4.5–5 hrs each way and only works as an overnight. Breaks the single-base rule.</p></div></div><div class="dcard">
+            <img loading="lazy" src="assets/img/dropped/yotei.jpg" alt="Mt Yotei / Niseko">
+            <div class="dbody"><h4>Mt Yotei / Niseko</h4><p>The &#x27;Ezo Fuji&#x27; is stunning, but ~3.5 hrs and a car-trap — trailheads and farms are unreachable without driving.</p></div></div><div class="dcard">
+            <img loading="lazy" src="assets/img/dropped/sounkyo.jpg" alt="Sounkyo Gorge">
+            <div class="dbody"><h4>Sounkyo Gorge</h4><p>Waterfalls and columnar cliffs, but ~3.5 hrs each way — better as an Asahikawa overnight than a day trip.</p></div></div></div>
+</div>
+
+<div class="tablewrap">
+  <h3 class="sec" style="font-family:var(--serif);font-weight:500;font-size:27px;margin-bottom:14px">At a glance</h3>
+  <table>
+    <thead><tr><th>Place</th><th>From Sapporo</th><th>Train ease</th><th>Coolness</th><th>Gallery</th></tr></thead>
+    <tbody><tr onclick="openLoc('sapporo')">
+          <td><b>Sapporo</b></td><td>Home base</td>
+          <td><span class="pill base">home base</span></td>
+          <td><span class="leaf">🌿🌿</span> <span class="muted">cool</span></td>
+          <td class="muted">13 photos</td></tr><tr onclick="openLoc('otaru')">
+          <td><b>Otaru</b></td><td>~35 min</td>
+          <td><span class="pill easy">easy</span></td>
+          <td><span class="leaf">🌿🌿</span> <span class="muted">cool</span></td>
+          <td class="muted">12 photos</td></tr><tr onclick="openLoc('jozankei')">
+          <td><b>Jozankei Onsen</b></td><td>~60 min</td>
+          <td><span class="pill easy">easy</span></td>
+          <td><span class="leaf">🌿🌿🌿</span> <span class="muted">cooler</span></td>
+          <td class="muted">14 photos</td></tr><tr onclick="openLoc('noboribetsu')">
+          <td><b>Noboribetsu</b></td><td>~1h15</td>
+          <td><span class="pill easy">easy</span></td>
+          <td><span class="leaf">🌿🌿🌿</span> <span class="muted">cooler</span></td>
+          <td class="muted">10 photos</td></tr><tr onclick="openLoc('shikotsu')">
+          <td><b>Lake Shikotsu</b></td><td>~1.5 hr</td>
+          <td><span class="pill medium">some transit</span></td>
+          <td><span class="leaf">🌿🌿🌿🌿</span> <span class="muted">coldest</span></td>
+          <td class="muted">9 photos</td></tr><tr onclick="openLoc('toya')">
+          <td><b>Lake Toya</b></td><td>~2 hr</td>
+          <td><span class="pill medium">some transit</span></td>
+          <td><span class="leaf">🌿🌿🌿</span> <span class="muted">cooler</span></td>
+          <td class="muted">16 photos</td></tr><tr onclick="openLoc('furano-biei')">
+          <td><b>Furano &amp; Biei</b></td><td>~2 hr</td>
+          <td><span class="pill medium">some transit</span></td>
+          <td><span class="leaf">🌿🌿🌿</span> <span class="muted">cooler</span></td>
+          <td class="muted">12 photos</td></tr><tr onclick="openLoc('asahiyama-zoo')">
+          <td><b>Asahiyama Zoo</b></td><td>~1.5 hr</td>
+          <td><span class="pill medium">some transit</span></td>
+          <td><span class="leaf">🌿🌿</span> <span class="muted">cool</span></td>
+          <td class="muted">12 photos</td></tr></tbody>
+  </table>
+</div>
+
+
+        <div class="modal" id="m-sapporo" role="dialog" aria-modal="true" aria-label="Sapporo">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · Home base · <span class="leaf">🌿🌿</span> cool</span>
+                <h2>Sapporo <span class="jp">札幌 · home base</span></h2>
+                <p class="mhook">Your home for 10 nights — beer gardens, neon Susukino, seafood markets and a mountain night view.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-sapporo">flowchart TD
+n0["Slow morning + coffee"] --> n1["Nijo Market seafood"] --> n2["Odori Park / Akarenga"] --> n3["Mt Moiwa sunset"] --> n4["Susukino dinner + beer garden"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Miso ramen · soup curry · jingisukan (grilled lamb) + Sapporo Classic · Nijo Market uni & crab</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">Odori Park &amp; TV Tower · red-brick Akarenga · Clock Tower · Susukino · Mt Moiwa</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">August Odori beer garden · Mt Moiwa sunset/night view · Nijo Market breakfast · Beer Museum · Shiroi Koibito Park</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">You live here — everything is walkable or one subway hop.</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">~24–26°C with breezy evenings — the cool, comfortable HQ for the trip.</span></div></div>
+            <h3 class="galh">Gallery · 13 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/01.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/01.jpg" alt="Odori Park in summer: young couple by the fountain with the Sapporo TV Tower rising behind, June 2022">
+                <figcaption>Odori Park in summer: young couple by the fountain with the Sapporo TV Tower rising behind, June 2022</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/02.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/02.jpg" alt="Susukino entertainment district ablaze with neon signs on a summer night, July 2018">
+                <figcaption>Susukino entertainment district ablaze with neon signs on a summer night, July 2018</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/03.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/03.jpg" alt="The August Sapporo Summer Festival beer garden in Odori Park, the city&#x27;s huge outdoor beer garden">
+                <figcaption>The August Sapporo Summer Festival beer garden in Odori Park, the city&#x27;s huge outdoor beer garden</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/04.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/04.jpg" alt="Night view over Sapporo&#x27;s city lights from the Mt. Moiwa ropeway observation deck">
+                <figcaption>Night view over Sapporo&#x27;s city lights from the Mt. Moiwa ropeway observation deck</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/05.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/05.jpg" alt="Nijo Market: stalls of fresh Hokkaido seafood including crab, uni and kaisendon in central Sapporo">
+                <figcaption>Nijo Market: stalls of fresh Hokkaido seafood including crab, uni and kaisendon in central Sapporo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/06.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/06.jpg" alt="The Former Hokkaido Government Office, the red-brick &#x27;Akarenga&#x27; landmark">
+                <figcaption>The Former Hokkaido Government Office, the red-brick &#x27;Akarenga&#x27; landmark</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/07.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/07.jpg" alt="Sapporo Clock Tower, the wooden colonial-era city symbol, summer 2018">
+                <figcaption>Sapporo Clock Tower, the wooden colonial-era city symbol, summer 2018</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/08.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/08.jpg" alt="Sapporo Beer Museum, the historic red-brick brewery building open to visitors">
+                <figcaption>Sapporo Beer Museum, the historic red-brick brewery building open to visitors</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/09.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/09.jpg" alt="Sapporo Beer Garden: Genghis Khan (jingisukan) grilled lamb on the table beside fresh draft beer">
+                <figcaption>Sapporo Beer Garden: Genghis Khan (jingisukan) grilled lamb on the table beside fresh draft beer</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/10.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/10.jpg" alt="Sapporo miso ramen, the city&#x27;s signature rich miso noodle bowl">
+                <figcaption>Sapporo miso ramen, the city&#x27;s signature rich miso noodle bowl</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/11.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/11.jpg" alt="Soup curry, a Sapporo specialty: spiced broth with chicken and roasted vegetables">
+                <figcaption>Soup curry, a Sapporo specialty: spiced broth with chicken and roasted vegetables</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/12.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/12.jpg" alt="Shiroi Koibito Park, the Ishiya chocolate factory&#x27;s fairytale-style attraction">
+                <figcaption>Shiroi Koibito Park, the Ishiya chocolate factory&#x27;s fairytale-style attraction</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/sapporo/13.jpg',this)">
+                <img loading="lazy" src="assets/img/sapporo/13.jpg" alt="Children playing in the fountains of Odori Park on a hot Sapporo summer day">
+                <figcaption>Children playing in the fountains of Odori Park on a hot Sapporo summer day</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="modal" id="m-otaru" role="dialog" aria-modal="true" aria-label="Otaru">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · ~35 min · <span class="leaf">🌿🌿</span> cool</span>
+                <h2>Otaru <span class="jp">小樽</span></h2>
+                <p class="mhook">Canal town of glass, music boxes and the freshest sushi — an easy 35-minute warm-up day.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-otaru">flowchart TD
+n0["Train from Sapporo"] --> n1["Canal & warehouses"] --> n2["Sushi lunch on Sakaimachi"] --> n3["Glassworks + music boxes"] --> n4["Soft serve / LeTAO"] --> n5["Dusk canal lamps"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+class n5 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Otaru sushi &amp; kaisendon · Kitaichi 8-tier soft serve · LeTAO cheesecake</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">Otaru Canal &amp; stone warehouses · Sakaimachi street · Kitaichi Glass · Music Box Museum + steam clock</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">Canal stroll (dusk gas lamps) · glass-blowing workshop · sushi-counter lunch · harbor walk</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">JR Hakodate Line — ~35 min direct from Sapporo (~¥750). The easiest trip on the board.</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">Sea-of-Japan breeze; mild — the warmest day trip but pleasant and walkable.</span></div></div>
+            <h3 class="galh">Gallery · 12 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/otaru/01.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/01.jpg" alt="Otaru Canal in summer — gas lamp, green ivy-clad stone warehouses and blue sky along the promenade">
+                <figcaption>Otaru Canal in summer — gas lamp, green ivy-clad stone warehouses and blue sky along the promenade</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/02.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/02.jpg" alt="Otaru Canal (Otaru Unga) on a clear July day, red-brick and ivy-covered warehouses reflected in the water">
+                <figcaption>Otaru Canal (Otaru Unga) on a clear July day, red-brick and ivy-covered warehouses reflected in the water</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/03.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/03.jpg" alt="Historic stone warehouses lining the Otaru Canal with a moored sightseeing boat, summer">
+                <figcaption>Historic stone warehouses lining the Otaru Canal with a moored sightseeing boat, summer</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/04.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/04.jpg" alt="Old harbor warehouse near the Temiyasen area with flower planters and yellow arch bridge under blue sky">
+                <figcaption>Old harbor warehouse near the Temiyasen area with flower planters and yellow arch bridge under blue sky</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/05.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/05.jpg" alt="Otaru Music Box Museum (Orgel Doh) main hall with the steam clock at the Sakaimachi corner, summer greenery">
+                <figcaption>Otaru Music Box Museum (Orgel Doh) main hall with the steam clock at the Sakaimachi corner, summer greenery</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/06.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/06.jpg" alt="The Otaru steam clock venting steam at the Marchen (Sakaimachi) intersection">
+                <figcaption>The Otaru steam clock venting steam at the Marchen (Sakaimachi) intersection</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/07.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/07.jpg" alt="Inside the Otaru Music Box Museum — timber-beamed hall packed with music boxes and crafts">
+                <figcaption>Inside the Otaru Music Box Museum — timber-beamed hall packed with music boxes and crafts</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/08.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/08.jpg" alt="Kitaichi Glass storefronts along the Sakaimachi historic merchant street, glassworks district">
+                <figcaption>Kitaichi Glass storefronts along the Sakaimachi historic merchant street, glassworks district</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/09.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/09.jpg" alt="Otaru&#x27;s famous Kitaichi eight-tier (八段) soft-serve ice cream cone — a Sakaimachi summer treat">
+                <figcaption>Otaru&#x27;s famous Kitaichi eight-tier (八段) soft-serve ice cream cone — a Sakaimachi summer treat</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/10.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/10.jpg" alt="Sushi chef preparing fresh Hokkaido seafood at the counter — Otaru is famous for its sushi">
+                <figcaption>Sushi chef preparing fresh Hokkaido seafood at the counter — Otaru is famous for its sushi</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/11.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/11.jpg" alt="Otaru Port Marina in summer — yachts and the breakwater against the blue Sea of Japan">
+                <figcaption>Otaru Port Marina in summer — yachts and the breakwater against the blue Sea of Japan</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/otaru/12.jpg',this)">
+                <img loading="lazy" src="assets/img/otaru/12.jpg" alt="Otaru Sakaimachi Yukata &amp; Wind-chime Summer Festival — stage performance in yukata">
+                <figcaption>Otaru Sakaimachi Yukata &amp; Wind-chime Summer Festival — stage performance in yukata</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="modal" id="m-jozankei" role="dialog" aria-modal="true" aria-label="Jozankei Onsen">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · ~60 min · <span class="leaf">🌿🌿🌿</span> cooler</span>
+                <h2>Jozankei Onsen <span class="jp">定山渓</span></h2>
+                <p class="mhook">Sapporo&#x27;s backyard hot-spring gorge — green canyon, river baths and an easy half-day reset.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-jozankei">flowchart TD
+n0["Bus from Sapporo"] --> n1["Hoheikyo Dam + onsen"] --> n2["Riverside lunch"] --> n3["Gorge walk + Futami bridge"] --> n4["Rotenburo soak"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Onsen-town manju &amp; soba · river-view cafés · ryokan kaiseki dinner</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">Toyohira River gorge · Futami Suspension Bridge · Hoheikyo Dam</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">Open-air rotenburo soak · footbath (ashiyu) · gorge nature walk · Hoheikyo Dam water release</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">Kappa Liner direct bus / Jotetsu bus ~60–75 min. Reserve the Kappa Liner by 5pm the day before.</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">Shaded river valley — cool and breezy; the onsen makes the evening.</span></div></div>
+            <h3 class="galh">Gallery · 14 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/01.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/01.jpg" alt="HERO: The Toyohira River gorge at Jozankei Onsen in deep summer green — clear blue-green water threading between lush forested hillsides near Sapporo.">
+                <figcaption>HERO: The Toyohira River gorge at Jozankei Onsen in deep summer green — clear blue-green water threading between lush forested hillsides near Sapporo.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/02.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/02.jpg" alt="The Toyohira River winding through Jozankei Onsen town in summer, lined by ryokan hot-spring hotels and green gorge slopes.">
+                <figcaption>The Toyohira River winding through Jozankei Onsen town in summer, lined by ryokan hot-spring hotels and green gorge slopes.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/03.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/03.jpg" alt="Summer rapids of the Toyohira River cutting through the green Jozankei gorge, with a riverside walker on the gravel bank.">
+                <figcaption>Summer rapids of the Toyohira River cutting through the green Jozankei gorge, with a riverside walker on the gravel bank.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/04.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/04.jpg" alt="Jozankei Onsen in summer — the river gorge framed by lush green trees with a large hot-spring hotel rising above the valley.">
+                <figcaption>Jozankei Onsen in summer — the river gorge framed by lush green trees with a large hot-spring hotel rising above the valley.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/05.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/05.jpg" alt="Open-air rotenburo bath at Hoheikyo Onsen, near Jozankei — natural hot-spring pool set among rocks and summer greenery.">
+                <figcaption>Open-air rotenburo bath at Hoheikyo Onsen, near Jozankei — natural hot-spring pool set among rocks and summer greenery.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/06.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/06.jpg" alt="Hoheikyo Dam in summer — its dramatic water discharge plunging into the green gorge under a blue sky, a popular Jozankei-area sight.">
+                <figcaption>Hoheikyo Dam in summer — its dramatic water discharge plunging into the green gorge under a blue sky, a popular Jozankei-area sight.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/07.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/07.jpg" alt="Clear summer rapids and pools of the Toyohira River tumbling over boulders in the green Jozankei gorge.">
+                <figcaption>Clear summer rapids and pools of the Toyohira River tumbling over boulders in the green Jozankei gorge.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/08.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/08.jpg" alt="Visitors watching the powerful summer water release at Hoheikyo Dam, framed by the green canyon walls near Jozankei.">
+                <figcaption>Visitors watching the powerful summer water release at Hoheikyo Dam, framed by the green canyon walls near Jozankei.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/09.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/09.jpg" alt="A hiker on the rocky banks of the Toyohira River at Jozankei in summer, beneath fresh green leaves and dark gorge cliffs.">
+                <figcaption>A hiker on the rocky banks of the Toyohira River at Jozankei in summer, beneath fresh green leaves and dark gorge cliffs.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/10.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/10.jpg" alt="The boulder-strewn summer riverbed of the Toyohira River at Jozankei, with clear water and forested gorge slopes under a bright blue sky.">
+                <figcaption>The boulder-strewn summer riverbed of the Toyohira River at Jozankei, with clear water and forested gorge slopes under a bright blue sky.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/11.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/11.jpg" alt="The Futami Suspension Bridge (二見吊橋) — Jozankei&#x27;s iconic red footbridge arcing over the green Toyohira River gorge in late summer, framed by lush forested cliffs.">
+                <figcaption>The Futami Suspension Bridge (二見吊橋) — Jozankei&#x27;s iconic red footbridge arcing over the green Toyohira River gorge in late summer, framed by lush forested cliffs.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/12.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/12.jpg" alt="Kappa-daiou, one of Jozankei Onsen&#x27;s famous kappa (river-sprite) bronze statues, standing among lush summer greenery and dappled sunlight along the riverside path.">
+                <figcaption>Kappa-daiou, one of Jozankei Onsen&#x27;s famous kappa (river-sprite) bronze statues, standing among lush summer greenery and dappled sunlight along the riverside path.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/13.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/13.jpg" alt="A kappa water shrine in Jozankei Onsen — stone river-sprite figures spouting spring water into a basin on a warm, snow-free summer day in the hot-spring town.">
+                <figcaption>A kappa water shrine in Jozankei Onsen — stone river-sprite figures spouting spring water into a basin on a warm, snow-free summer day in the hot-spring town.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/jozankei/14.jpg',this)">
+                <img loading="lazy" src="assets/img/jozankei/14.jpg" alt="The Toyohira River threading through the green Jozankei gorge, dark rock cliffs rising on the right beneath lush summer forest near the onsen town.">
+                <figcaption>The Toyohira River threading through the green Jozankei gorge, dark rock cliffs rising on the right beneath lush summer forest near the onsen town.</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="modal" id="m-noboribetsu" role="dialog" aria-modal="true" aria-label="Noboribetsu">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · ~1h15 · <span class="leaf">🌿🌿🌿</span> cooler</span>
+                <h2>Noboribetsu <span class="jp">登別</span></h2>
+                <p class="mhook">Hokkaido&#x27;s onsen heavyweight — a steaming &#x27;Hell Valley&#x27; crater and the best baths in the north.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-noboribetsu">flowchart TD
+n0["Train from Sapporo"] --> n1["Hell Valley + Oyunuma"] --> n2["Onsen-town lunch"] --> n3["River footbath / Date Jidaimura"] --> n4["Big onsen soak"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Onsen-town set meals · Date Jidaimura snacks · Hokkaido ramen</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">Jigokudani 'Hell Valley' · Oyunuma steaming pond · Oni (demon) statues · Enma-do</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">Hell Valley boardwalk · Oyunuma-gawa natural river footbath · Date Jidaimura (Edo theme park) · big onsen soak</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">JR Limited Express ~1h05 to Noboribetsu, then bus/taxi ~15 min up to the onsen town.</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">Forested volcanic uplands — cool air, endless steam, made for soaking.</span></div></div>
+            <h3 class="galh">Gallery · 10 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/01.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/01.jpg" alt="Jigokudani &#x27;Hell Valley&#x27; vista — steaming grey-and-orange volcanic crater with the visitor boardwalk threading along its flank, Noboribetsu Onsen, Hokkaido">
+                <figcaption>Jigokudani &#x27;Hell Valley&#x27; vista — steaming grey-and-orange volcanic crater with the visitor boardwalk threading along its flank, Noboribetsu Onsen, Hokkaido</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/02.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/02.jpg" alt="Jigokudani Hell Valley looking up the gorge — sulphur fumaroles steaming from the rust-coloured cliffs above the trailhead shrine, Noboribetsu">
+                <figcaption>Jigokudani Hell Valley looking up the gorge — sulphur fumaroles steaming from the rust-coloured cliffs above the trailhead shrine, Noboribetsu</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/03.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/03.jpg" alt="Oyunuma — the steaming sulphur hot-spring pond ringed by fuming volcanic ridges, the source of Noboribetsu&#x27;s onsen waters">
+                <figcaption>Oyunuma — the steaming sulphur hot-spring pond ringed by fuming volcanic ridges, the source of Noboribetsu&#x27;s onsen waters</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/04.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/04.jpg" alt="Oyunuma-gawa natural footbath — visitors soak their feet in the warm sulphur river running through the green summer forest, Noboribetsu">
+                <figcaption>Oyunuma-gawa natural footbath — visitors soak their feet in the warm sulphur river running through the green summer forest, Noboribetsu</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/05.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/05.jpg" alt="Giant red Oni demon statue welcoming visitors at the entrance to Noboribetsu Onsen, backed by lush green summer woodland">
+                <figcaption>Giant red Oni demon statue welcoming visitors at the entrance to Noboribetsu Onsen, backed by lush green summer woodland</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/06.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/06.jpg" alt="Noboribetsu Date Jidaimura — the vermilion main gate of the Edo-period theme park under a bright blue summer sky with festival banners">
+                <figcaption>Noboribetsu Date Jidaimura — the vermilion main gate of the Edo-period theme park under a bright blue summer sky with festival banners</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/07.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/07.jpg" alt="Oyunuma-gawa hot-spring stream cascading over mineral-stained rocks through the forest, steam rising off the warm water near the footbath">
+                <figcaption>Oyunuma-gawa hot-spring stream cascading over mineral-stained rocks through the forest, steam rising off the warm water near the footbath</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/08.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/08.jpg" alt="Wooden boardwalk and viewing deck descending into the bleached sulphur slopes of Jigokudani Hell Valley, Noboribetsu">
+                <figcaption>Wooden boardwalk and viewing deck descending into the bleached sulphur slopes of Jigokudani Hell Valley, Noboribetsu</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/09.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/09.jpg" alt="A milky-blue boiling sulphur spring set in a wooden enclosure within Jigokudani Hell Valley, Noboribetsu">
+                <figcaption>A milky-blue boiling sulphur spring set in a wooden enclosure within Jigokudani Hell Valley, Noboribetsu</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/noboribetsu/10.jpg',this)">
+                <img loading="lazy" src="assets/img/noboribetsu/10.jpg" alt="Noboribetsu Bear Park ropeway station — the gateway to the brown-bear mountain park, green forested hillside behind">
+                <figcaption>Noboribetsu Bear Park ropeway station — the gateway to the brown-bear mountain park, green forested hillside behind</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="modal" id="m-shikotsu" role="dialog" aria-modal="true" aria-label="Lake Shikotsu">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · ~1.5 hr · <span class="leaf">🌿🌿🌿🌿</span> coldest</span>
+                <h2>Lake Shikotsu <span class="jp">支笏湖</span></h2>
+                <p class="mhook">Japan&#x27;s clearest lake — paddle a see-through kayak over water you can stare straight down through.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-shikotsu">flowchart TD
+n0["Sapporo → Chitose → lake"] --> n1["Clear-kayak tour"] --> n2["Himemasu lunch"] --> n3["Shoreline walk"] --> n4["Lakeside onsen"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Himemasu (kokanee salmon) · hime-don · lakeside cafés</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">'Shikotsu blue' water · Mt Tarumae &amp; Eniwa volcanoes · Yamasen red bridge · Shikotsuko Onsen</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">Clear-bottom kayak / canoe tour · boat cruise · shoreline walk · Mt Tarumae hike · onsen</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">JR/bus to Chitose, then bus to Shikotsuko — ~1.5 hr total. No direct Sapporo bus (discontinued).</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">High caldera lake — crisp, clean air; the water stays cold and glass-clear. Coolest pick.</span></div></div>
+            <h3 class="galh">Gallery · 9 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/01.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/01.jpg" alt="The volcanic cone and lava dome of Mt Tarumae rising beyond the deep-blue water of Lake Shikotsu in summer, seen from a passing boat.">
+                <figcaption>The volcanic cone and lava dome of Mt Tarumae rising beyond the deep-blue water of Lake Shikotsu in summer, seen from a passing boat.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/02.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/02.jpg" alt="Two sightseeing tour boats crossing the clear blue waters of Lake Shikotsu with forested summer mountains behind.">
+                <figcaption>Two sightseeing tour boats crossing the clear blue waters of Lake Shikotsu with forested summer mountains behind.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/03.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/03.jpg" alt="Kayakers paddling the transparent emerald-green water of Lake Shikotsu in mid-August, framed by lush green forest.">
+                <figcaption>Kayakers paddling the transparent emerald-green water of Lake Shikotsu in mid-August, framed by lush green forest.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/04.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/04.jpg" alt="Mt Eniwa-dake volcano towering over the deep-blue surface of Lake Shikotsu under a summer sky.">
+                <figcaption>Mt Eniwa-dake volcano towering over the deep-blue surface of Lake Shikotsu under a summer sky.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/05.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/05.jpg" alt="Boulder-strewn shoreline of Lake Shikotsu with waves lapping the volcanic-sand beach and forested peaks in the distance.">
+                <figcaption>Boulder-strewn shoreline of Lake Shikotsu with waves lapping the volcanic-sand beach and forested peaks in the distance.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/06.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/06.jpg" alt="A sightseeing tour boat on Lake Shikotsu glimpsed through dense green lakeside foliage in summer.">
+                <figcaption>A sightseeing tour boat on Lake Shikotsu glimpsed through dense green lakeside foliage in summer.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/07.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/07.jpg" alt="Shikotsuko Onsen village in summer: lakeside shops, food stalls and visitors strolling the main street below a green mountain.">
+                <figcaption>Shikotsuko Onsen village in summer: lakeside shops, food stalls and visitors strolling the main street below a green mountain.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/08.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/08.jpg" alt="Hikers on the green summit ridge of Mt Tarumae beside its steaming lava dome, the active volcano on Lake Shikotsu&#x27;s southern shore.">
+                <figcaption>Hikers on the green summit ridge of Mt Tarumae beside its steaming lava dome, the active volcano on Lake Shikotsu&#x27;s southern shore.</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/shikotsu/09.jpg',this)">
+                <img loading="lazy" src="assets/img/shikotsu/09.jpg" alt="A forested headland rising straight from the blue water of Lake Shikotsu, seen from the lake in late summer.">
+                <figcaption>A forested headland rising straight from the blue water of Lake Shikotsu, seen from the lake in late summer.</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="modal" id="m-toya" role="dialog" aria-modal="true" aria-label="Lake Toya">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · ~2 hr · <span class="leaf">🌿🌿🌿</span> cooler</span>
+                <h2>Lake Toya <span class="jp">洞爺湖</span></h2>
+                <p class="mhook">Caldera lake with a steaming baby volcano — and fireworks over the water every summer night.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-toya">flowchart TD
+n0["Train from Sapporo"] --> n1["Showa-Shinzan + Usu ropeway"] --> n2["Lakeside lunch"] --> n3["Cruise to Nakajima"] --> n4["Onsen + nightly fireworks"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Lakeside onsen kaiseki · local soft serve · café lunches</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">Caldera + Nakajima island · Showa-Shinzan lava dome · Mt Usu ropeway</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">Mt Usu ropeway · lake cruise to Nakajima · Showa-Shinzan · nightly summer fireworks · onsen</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">JR Limited Express ~1h50 to Toya station + bus ~20 min to the lakeside.</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">Lake-cooled caldera with breezy summit views — fireworks run nightly Apr–Oct.</span></div></div>
+            <h3 class="galh">Gallery · 16 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/toya/01.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/01.jpg" alt="Morning sun over the Lake Toya caldera with Nakajima island, viewed from The Windsor Hotel Toya">
+                <figcaption>Morning sun over the Lake Toya caldera with Nakajima island, viewed from The Windsor Hotel Toya</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/02.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/02.jpg" alt="Lake Toya in summer with the forested cone of Nakajima island rising from the center of the caldera">
+                <figcaption>Lake Toya in summer with the forested cone of Nakajima island rising from the center of the caldera</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/03.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/03.jpg" alt="Lake Toya and Nakajima island seen from Sobetsu on the caldera rim">
+                <figcaption>Lake Toya and Nakajima island seen from Sobetsu on the caldera rim</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/04.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/04.jpg" alt="Showa-Shinzan, the steaming brown-red lava dome that rose from farmland in the 1940s">
+                <figcaption>Showa-Shinzan, the steaming brown-red lava dome that rose from farmland in the 1940s</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/05.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/05.jpg" alt="Steam venting from the rust-colored slopes of Showa-Shinzan in June">
+                <figcaption>Steam venting from the rust-colored slopes of Showa-Shinzan in June</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/06.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/06.jpg" alt="Lake Toya (left) and Showa-Shinzan (right) looked down upon from the Mount Usu summit">
+                <figcaption>Lake Toya (left) and Showa-Shinzan (right) looked down upon from the Mount Usu summit</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/07.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/07.jpg" alt="Volcanic Mount Usu, reached by ropeway for panoramic summit views over Lake Toya">
+                <figcaption>Volcanic Mount Usu, reached by ropeway for panoramic summit views over Lake Toya</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/08.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/08.jpg" alt="Summer view across the blue waters of Lake Toya">
+                <figcaption>Summer view across the blue waters of Lake Toya</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/09.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/09.jpg" alt="Lakeside pier at Toyako, departure point for cruise boats to Nakajima island">
+                <figcaption>Lakeside pier at Toyako, departure point for cruise boats to Nakajima island</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/10.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/10.jpg" alt="Lake Toya at night from the lakeside Toyako Onsen town">
+                <figcaption>Lake Toya at night from the lakeside Toyako Onsen town</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/11.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/11.jpg" alt="Panorama of Lake Toya from The Windsor Hotel above the caldera">
+                <figcaption>Panorama of Lake Toya from The Windsor Hotel above the caldera</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/12.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/12.jpg" alt="Rental and cruise boats moored at a Lake Toya pier, with a volcanic peak across the water">
+                <figcaption>Rental and cruise boats moored at a Lake Toya pier, with a volcanic peak across the water</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/13.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/13.jpg" alt="Toyako Onsen nightly summer fireworks bursting in red over Lake Toya, with a launch boat silhouetted on the water">
+                <figcaption>Toyako Onsen nightly summer fireworks bursting in red over Lake Toya, with a launch boat silhouetted on the water</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/14.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/14.jpg" alt="Multicolored fireworks rising from the lake during the Toyako Onsen Long-Run Fireworks Festival, reflected on Lake Toya">
+                <figcaption>Multicolored fireworks rising from the lake during the Toyako Onsen Long-Run Fireworks Festival, reflected on Lake Toya</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/15.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/15.jpg" alt="A wide green-and-gold firework shell over Lake Toya, launched from a boat off Toyako Onsen on a summer night">
+                <figcaption>A wide green-and-gold firework shell over Lake Toya, launched from a boat off Toyako Onsen on a summer night</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/toya/16.jpg',this)">
+                <img loading="lazy" src="assets/img/toya/16.jpg" alt="Lake Toya at blue-hour dusk in summer, framed by a white birch, with Nakajima island and the lights of Toyako Onsen glowing on the far shore">
+                <figcaption>Lake Toya at blue-hour dusk in summer, framed by a white birch, with Nakajima island and the lights of Toyako Onsen glowing on the far shore</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="modal" id="m-furano-biei" role="dialog" aria-modal="true" aria-label="Furano &amp;amp; Biei">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · ~2 hr · <span class="leaf">🌿🌿🌿</span> cooler</span>
+                <h2>Furano &amp; Biei <span class="jp">富良野・美瑛</span></h2>
+                <p class="mhook">Hokkaido&#x27;s postcard — patchwork hills, rainbow flower fields and the otherworldly Blue Pond.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-furano-biei">flowchart TD
+n0["Train from Sapporo"] --> n1["Biei: Blue Pond + Shirahige Falls"] --> n2["E-bike patchwork hills"] --> n3["Furano: Farm Tomita flowers"] --> n4["Melon / cheese"] --> n5["Back to Sapporo"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+class n5 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Furano melon · cheese &amp; wine · omu-curry · lavender soft serve</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">Biei patchwork hills · Shirogane Blue Pond · Shirahige Falls · Shikisai-no-oka · Farm Tomita</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">E-bike the hills · flower farms · Blue Pond &amp; falls · Furano cheese/wine tasting</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">Furano Lavender Express / JR ~2 hr. Local farm buses are sparse — pre-book an e-bike, taxi-tour or the Twinkle Bus or you'll be stuck at the station.</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">Highland farmland — fresh, breezy, big skies. (Lavender peaks early July; by mid-Aug expect green hills + mixed summer flowers, not lavender.)</span></div></div>
+            <h3 class="galh">Gallery · 12 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/01.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/01.jpg" alt="Shirogane Blue Pond (Aoiike), Biei — the surreal turquoise pond with bare larch trees, summer">
+                <figcaption>Shirogane Blue Pond (Aoiike), Biei — the surreal turquoise pond with bare larch trees, summer</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/02.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/02.jpg" alt="Shikisai-no-oka, Biei — rolling patchwork hills of colorful summer flower rows">
+                <figcaption>Shikisai-no-oka, Biei — rolling patchwork hills of colorful summer flower rows</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/03.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/03.jpg" alt="Biei&#x27;s colorful patchwork crop fields under summer sky, Hokkaido (July)">
+                <figcaption>Biei&#x27;s colorful patchwork crop fields under summer sky, Hokkaido (July)</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/04.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/04.jpg" alt="Ken &amp; Mary Tree — a lone poplar standing in Biei&#x27;s green summer farmland">
+                <figcaption>Ken &amp; Mary Tree — a lone poplar standing in Biei&#x27;s green summer farmland</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/05.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/05.jpg" alt="Vivid flower rows at Farm Tomita, Nakafurano — mixed summer blooms">
+                <figcaption>Vivid flower rows at Farm Tomita, Nakafurano — mixed summer blooms</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/06.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/06.jpg" alt="Sunflowers in bloom at Farm Tomita, Furano, in summer">
+                <figcaption>Sunflowers in bloom at Farm Tomita, Furano, in summer</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/07.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/07.jpg" alt="Rainbow flower fields near Furano, Hokkaido, in summer">
+                <figcaption>Rainbow flower fields near Furano, Hokkaido, in summer</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/08.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/08.jpg" alt="Blue Pond (Aoiike) at Biei — milky-turquoise water and dead trees">
+                <figcaption>Blue Pond (Aoiike) at Biei — milky-turquoise water and dead trees</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/09.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/09.jpg" alt="Shikisai-no-oka flower hills, Biei, in August">
+                <figcaption>Shikisai-no-oka flower hills, Biei, in August</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/10.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/10.jpg" alt="Lavender rows at Farm Tomita, Furano — the region&#x27;s signature July bloom">
+                <figcaption>Lavender rows at Farm Tomita, Furano — the region&#x27;s signature July bloom</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/11.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/11.jpg" alt="Shirahige Falls, Biei — spring water cascading into the blue Biei River (summer)">
+                <figcaption>Shirahige Falls, Biei — spring water cascading into the blue Biei River (summer)</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/furano-biei/12.jpg',this)">
+                <img loading="lazy" src="assets/img/furano-biei/12.jpg" alt="Multicolored summer blossoms in the fields of Furano">
+                <figcaption>Multicolored summer blossoms in the fields of Furano</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="modal" id="m-asahiyama-zoo" role="dialog" aria-modal="true" aria-label="Asahiyama Zoo">
+          <div class="modal-inner">
+            <button class="mclose" onclick="closeLoc()" aria-label="Close">×</button>
+            <div class="modal-head">
+              <div><span class="mkick">Day trip · ~1.5 hr · <span class="leaf">🌿🌿</span> cool</span>
+                <h2>Asahiyama Zoo <span class="jp">旭山動物園 · 旭川</span></h2>
+                <p class="mhook">Japan&#x27;s most ingenious zoo — penguins, polar bears and a glass seal tube — plus Asahikawa ramen.</p></div>
+            </div>
+            <div class="flowwrap"><div class="flowlabel">A day here — morning → night</div><pre class="mermaid flow" id="flow-asahiyama-zoo">flowchart TD
+n0["Train from Sapporo"] --> n1["Asahikawa → zoo"] --> n2["Polar bears + seal tube"] --> n3["Penguins + behavioral exhibits"] --> n4["Asahikawa shoyu ramen"]
+class n0 fl;
+class n1 fl;
+class n2 fl;
+class n3 fl;
+class n4 fl;
+classDef fl fill:#1c212a,stroke:#3a4350,color:#e9ecf1,rx:8,ry:8;</pre></div>
+            <div class="info"><div class="irow"><span class="ikey food">Food</span><span class="ival">Asahikawa shoyu (soy-sauce) ramen — the city is a ramen capital</span></div><div class="irow"><span class="ikey see">See</span><span class="ival">Polar bears · penguins · seal 'Marine Way' tube · behavioral-exhibit enclosures</span></div><div class="irow"><span class="ikey do">Do</span><span class="ival">Half-day at the zoo · ramen lunch in Asahikawa</span></div><div class="irow"><span class="ikey getting">Getting there</span><span class="ival">JR Limited Express ~1h25 to Asahikawa + bus ~40 min to the zoo.</span></div><div class="irow"><span class="ikey climate">Climate</span><span class="ival">Inland basin — can be the warmest stop; go in the morning, ramen after.</span></div></div>
+            <h3 class="galh">Gallery · 12 photos</h3>
+            <div class="gallery"><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/01.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/01.jpg" alt="Polar bear at Asahiyama Zoo, Asahikawa">
+                <figcaption>Polar bear at Asahiyama Zoo, Asahikawa</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/02.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/02.jpg" alt="Polar bear diving underwater in its pool, Asahiyama Zoo">
+                <figcaption>Polar bear diving underwater in its pool, Asahiyama Zoo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/03.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/03.jpg" alt="Humboldt penguin standing by the penguin pool, Asahiyama Zoo">
+                <figcaption>Humboldt penguin standing by the penguin pool, Asahiyama Zoo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/04.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/04.jpg" alt="King penguin &#x27;flying&#x27; underwater in the penguin pool, Asahiyama Zoo">
+                <figcaption>King penguin &#x27;flying&#x27; underwater in the penguin pool, Asahiyama Zoo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/05.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/05.jpg" alt="King penguin swimming just beneath the surface, Asahiyama Zoo">
+                <figcaption>King penguin swimming just beneath the surface, Asahiyama Zoo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/06.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/06.jpg" alt="Spotted seal swimming in the &#x27;Marine Way&#x27; seal exhibit, Asahiyama Zoo">
+                <figcaption>Spotted seal swimming in the &#x27;Marine Way&#x27; seal exhibit, Asahiyama Zoo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/07.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/07.jpg" alt="Seal swimming in the seal pool, Asahiyama Zoo">
+                <figcaption>Seal swimming in the seal pool, Asahiyama Zoo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/08.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/08.jpg" alt="Main gate and ticket booth of Asahiyama Zoo, Asahikawa (summer)">
+                <figcaption>Main gate and ticket booth of Asahiyama Zoo, Asahikawa (summer)</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/09.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/09.jpg" alt="Behavioral exhibition: Japanese macaques using a tool to reach a snack, Asahiyama Zoo">
+                <figcaption>Behavioral exhibition: Japanese macaques using a tool to reach a snack, Asahiyama Zoo</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/10.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/10.jpg" alt="Asahikawa shoyu (soy sauce) ramen with chashu pork at Ramenya Tenkin">
+                <figcaption>Asahikawa shoyu (soy sauce) ramen with chashu pork at Ramenya Tenkin</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/11.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/11.jpg" alt="Asahikawa shoyu ramen, a Hokkaido ramen specialty">
+                <figcaption>Asahikawa shoyu ramen, a Hokkaido ramen specialty</figcaption></figure><figure class="tile" onclick="lightbox(event,'assets/img/asahiyama-zoo/12.jpg',this)">
+                <img loading="lazy" src="assets/img/asahiyama-zoo/12.jpg" alt="Polar bear in its rocky enclosure, Asahiyama Zoo">
+                <figcaption>Polar bear in its rocky enclosure, Asahiyama Zoo</figcaption></figure></div>
+          </div>
+        </div>
+
+<div class="lb" id="lb" onclick="closeLB()"><img id="lbimg" src="" alt=""><p id="lbcap"></p></div>
+
+<footer>
+  <div>Hokkaido day-trips moodboard · built for the Aug 2026 trip · all photos Creative Commons via Wikimedia Commons</div>
+  <ul class="credits"><li><b>Sapporo</b> — 三上 勝生 / Wikimedia Commons (CC BY-SA 2.1 jp)</li>
+<li><b>Sapporo</b> — Choi2451 / Wikimedia Commons (CC BY-SA 4.0)</li>
+<li><b>Sapporo</b> — 禁樹なずな / Wikimedia Commons (Public domain)</li>
+<li><b>Sapporo</b> — Sorah Fukumori / Wikimedia Commons (CC BY 3.0)</li>
+<li><b>Sapporo</b> — Wing1990hk / Wikimedia Commons (CC BY 3.0)</li>
+<li><b>Sapporo</b> — Unknown / Wikimedia Commons (Public domain)</li>
+<li><b>Sapporo</b> — Bjørn Christian Tørrissen / Wikimedia Commons (CC BY-SA 4.0)</li>
+<li><b>Sapporo</b> — MIKI Yoshihito
+derivative work: MrPanyGoff / Wikimedia Commons (CC BY 2.0)</li>
+<li><b>Sapporo</b> — Nissy-KITAQ / Wikimedia Commons (CC BY-SA 3.0)</li>
+<li><b>Sapporo</b> — ノボホショコロトソ / Wikimedia Commons (CC BY 4.0)</li>
+<li><b>Sapporo</b> — Koichi Oda / Wikimedia Commons (CC BY-SA 2.0)</li>
+<li><b>Sapporo</b> — t-konno / Wikimedia Commons (CC BY-SA 3.0)</li>
+<li><b>Sapporo</b> — Choi2451 / Wikimedia Commons (CC BY-SA 3.0)</li>
+<li><b>Otaru</b> — Sho Horiuchi, CC BY-SA 3.0</li>
+<li><b>Otaru</b> — Choi2451, CC BY-SA 3.0</li>
+<li><b>Otaru</b> — Keyaki (欅), CC BY-SA 3.0</li>
+<li><b>Otaru</b> — Koichi Oda (odako1), CC BY-SA 2.0</li>
+<li><b>Otaru</b> — Wpcpey, CC BY 4.0</li>
+<li><b>Otaru</b> — Arjan Richter, CC BY 2.0</li>
+<li><b>Otaru</b> — Keyaki (User:欅), CC BY-SA 3.0</li>
+<li><b>Otaru</b> — bryan…, CC BY-SA 2.0</li>
+<li><b>Otaru</b> — Syced, CC0</li>
+<li><b>Otaru</b> — 663highland, CC BY-SA 4.0</li>
+<li><b>Otaru</b> — 逃亡者, Public domain</li>
+<li><b>Jozankei Onsen</b> — Adam Jones / Wikimedia Commons, CC BY-SA 2.0</li>
+<li><b>Jozankei Onsen</b> — David McKelvey / Wikimedia Commons, CC BY 2.0</li>
+<li><b>Jozankei Onsen</b> — Soica2001 / Wikimedia Commons, Public domain</li>
+<li><b>Jozankei Onsen</b> — Hiroshi Nakai / Wikimedia Commons, CC BY 2.0</li>
+<li><b>Jozankei Onsen</b> — t-konno / CC BY-SA 3.0 via Wikimedia Commons</li>
+<li><b>Jozankei Onsen</b> — makou0629 / CC BY 2.0 via Openverse/Flickr</li>
+<li><b>Jozankei Onsen</b> — T DMY / CC BY 3.0 via Wikimedia Commons</li>
+<li><b>Noboribetsu</b> — Calistemon, CC BY-SA 4.0, via Wikimedia Commons</li>
+<li><b>Noboribetsu</b> — Choi2451, CC BY-SA 3.0, via Wikimedia Commons</li>
+<li><b>Noboribetsu</b> — Savannah Rivka, CC BY-SA 4.0, via Wikimedia Commons</li>
+<li><b>Noboribetsu</b> — enqvist lau, CC BY 2.0, via Wikimedia Commons</li>
+<li><b>Noboribetsu</b> — User:欅, CC BY-SA 3.0, via Wikimedia Commons</li>
+<li><b>Noboribetsu</b> — Ted Chi, CC BY 2.0, via Wikimedia Commons</li>
+<li><b>Lake Shikotsu</b> — 663highland, CC BY 2.5</li>
+<li><b>Lake Shikotsu</b> — Nesnad, CC BY-SA 4.0</li>
+<li><b>Lake Shikotsu</b> — Hotsuregua, CC BY-SA 3.0</li>
+<li><b>Lake Shikotsu</b> — MIKI Yoshihito, CC BY 2.0</li>
+<li><b>Lake Shikotsu</b> — Andrey Grushnikov, CC BY 2.0</li>
+<li><b>Lake Toya</b> — 663highland / Wikimedia Commons (CC BY 2.5)</li>
+<li><b>Lake Toya</b> — trengarasu / Wikimedia Commons (CC BY-SA 2.0)</li>
+<li><b>Lake Toya</b> — Highten31 / Wikimedia Commons (CC BY-SA 3.0)</li>
+<li><b>Lake Toya</b> — cydarianna / Wikimedia Commons (CC BY-SA 2.0)</li>
+<li><b>Lake Toya</b> — クリオネサラダ / Wikimedia Commons (CC BY-SA 3.0)</li>
+<li><b>Lake Toya</b> — Suicasmo / Wikimedia Commons (CC BY-SA 4.0)</li>
+<li><b>Lake Toya</b> — tiseb from Tōyako, Hokkaidō / Wikimedia Commons (CC BY 2.0)</li>
+<li><b>Lake Toya</b> — Photos of Japan / Wikimedia Commons (CC0)</li>
+<li><b>Lake Toya</b> — veroyama from The Windsor Hotel at lakeside Toya, Toyako, Hokkaido / Wikimedia Commons (CC BY 2.0)</li>
+<li><b>Lake Toya</b> — Adonis Chen / Wikimedia Commons (CC BY 2.0)</li>
+<li><b>Lake Toya</b> — H.L.I.T. / CC BY 2.0 via Flickr (Openverse)</li>
+<li><b>Lake Toya</b> — Σ64 / Wikimedia Commons (CC BY-SA 3.0)</li>
+<li><b>Furano &amp;amp; Biei</b> — MaedaAkihiko / CC BY-SA 4.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — t-konno / CC BY-SA 3.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — 雷太 / CC BY 2.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — Adam Jones from Kelowna, BC, Canada / CC BY-SA 2.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — Douglas Perkins / CC BY 4.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — Chi King / CC BY 2.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — OKJaguar / CC BY-SA 4.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — Party Lin / CC BY 2.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — Kentagon / CC BY-SA 4.0 via Wikimedia Commons</li>
+<li><b>Furano &amp;amp; Biei</b> — Choi2451 / CC BY-SA 3.0 via Wikimedia Commons</li>
+<li><b>Asahiyama Zoo</b> — Douglas Perkins / CC BY 4.0</li>
+<li><b>Asahiyama Zoo</b> — くーさん / CC BY 2.0</li>
+<li><b>Asahiyama Zoo</b> — Douglas Perkins / CC BY 2.0</li>
+<li><b>Asahiyama Zoo</b> — pelican from Tokyo, Japan / CC BY-SA 2.0</li>
+<li><b>Asahiyama Zoo</b> — saname777 / CC BY 2.0</li>
+<li><b>Asahiyama Zoo</b> — ParrotPoint / CC BY 4.0</li>
+<li><b>Asahiyama Zoo</b> — ヨシキ / CC BY 2.0</li>
+<li><b>Asahiyama Zoo</b> — Famicon / CC BY-SA 4.0</li>
+<li><b>Asahiyama Zoo</b> — Nesnad / CC BY 4.0</li></ul>
+</footer>
+
+<script>
+mermaid.initialize({startOnLoad:false,theme:"dark",flowchart:{curve:"basis"},
+  themeVariables:{fontFamily:"Helvetica Neue, Inter, sans-serif",fontSize:"14px"}});
+window.addEventListener("load",()=>{
+  const hub=document.querySelector(".hub .mermaid");
+  if(hub) mermaid.run({nodes:[hub]});
+});
+let _scrollY=0;
+function openLoc(slug){
+  const m=document.getElementById("m-"+slug); if(!m)return;
+  _scrollY=window.scrollY;
+  m.classList.add("open"); document.body.style.overflow="hidden";
+  m.scrollTop=0;
+  // Lazy-render the day-flow Mermaid now that the modal is visible (width measures correctly).
+  const flow=m.querySelector(".mermaid.flow");
+  if(flow && !flow.dataset.rendered){
+    flow.dataset.rendered="1";
+    try{ mermaid.run({nodes:[flow]}); }catch(e){ flow.dataset.rendered=""; }
+  }
+}
+function closeLoc(){
+  document.querySelectorAll(".modal.open").forEach(m=>m.classList.remove("open"));
+  document.body.style.overflow="";
+}
+function lightbox(ev,src,fig){
+  ev.stopPropagation();
+  document.getElementById("lbimg").src=src;
+  const cap=fig.querySelector("figcaption");
+  document.getElementById("lbcap").textContent=cap?cap.textContent:"";
+  document.getElementById("lb").classList.add("open");
+}
+function closeLB(){document.getElementById("lb").classList.remove("open");}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeLB();closeLoc();}});
+document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeLoc();}));
+</script>
+</body></html>
